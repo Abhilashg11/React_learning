@@ -1,26 +1,19 @@
-// import React from 'react';
-// import {Button,Dialog,DialogActions,DialogContent,DialogContentText,DialogTitle} from '@mui/material';
+import React from 'react';
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button } from '@mui/material';
 
+const DialogComponent = ({ open, handleClose }) => {
+    const title = 'message'
+  return (
+    <Dialog open={open} onClose={handleClose}>
+      <DialogTitle>{title}</DialogTitle>
+      <DialogContent>
+        <DialogContentText>Hi everyone, how are you all doing</DialogContentText>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose}>Disagree</Button>
+      </DialogActions>
+    </Dialog>
+  );
+};
 
-// const dialog = () =>{
-//     return(
-//         <div>
-//             <Dialog 
-//             open={true}
-            
-//             >
-//                 <DialogTitle>{"More about peoplr"}</DialogTitle>
-//                 <DialogContent>
-//                     <DialogContentText>
-//                         Hi iam and my age is 
-//                     </DialogContentText>
-//                 </DialogContent>
-//                 <DialogActions>
-                    
-   
-//                 </DialogActions>
-//             </Dialog>
-//         </div>
-//     )
-// }
-// export default HandleLearn 
+export default DialogComponent;
